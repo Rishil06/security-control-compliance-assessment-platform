@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local database
+grc.db
+*.db
+
+# Generated reports
+*.pdf
+
+# Testing and tooling
+.pytest_cache/
+.mypy_cache/
+.streamlit/secrets.toml
