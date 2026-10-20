@@ -98,13 +98,16 @@ Parsers are tested against realistic command output, so the logic is verified on
 | Streamlit page blank / port busy | `streamlit run app.py --server.port 8502` |
 | Want a clean slate | Sidebar -> Reset, or delete `grc.db` |
 
-## Known limitations (be upfront about these)
+## Limitations
 
-- Each control is scoped to one measurable requirement; real NIST controls are broader.
-- Checks cover a single local Windows host and a snapshot in time, not continuous monitoring.
-- Likelihood/impact values are analyst judgments, not derived from threat data.
-- AU-4 uses log size as a proxy for storage capacity.
+- Each security control is evaluated against a defined set of measurable requirements rather than the full scope of the corresponding NIST SP 800-53 control.
+- Automated assessments currently target a single Windows host and reflect its state at the time of execution.
+- Risk scores are based on configured likelihood, impact, and assessment status values; they are not derived from live threat intelligence.
+- Security log capacity is estimated using log-size information as a proxy.
 
-## Ideas for Phase 5
+## Future Enhancements
 
-Map controls to CIS Controls / ISO 27001, add a Linux checker module, schedule periodic scans with trend charts, import Wazuh/Sysmon evidence from your SOC lab.
+- Extend control mappings to additional frameworks, including CIS Controls and ISO/IEC 27001.
+- Introduce Linux security assessment capabilities.
+- Add scheduled assessments and historical compliance trend analysis.
+- Integrate security evidence from tools such as Wazuh and Sysmon.
