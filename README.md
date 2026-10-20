@@ -9,7 +9,7 @@ Framework -> Control -> Assessment (manual / automated) -> Gap -> Risk -> Remedi
 ## Quick start (Windows)
 
 1. Install Python 3.10+ from python.org (tick "Add python.exe to PATH").
-2. Unzip the project, open **PowerShell as Administrator** in the folder, then:
+2. Open **PowerShell as Administrator** in the project folder, then:
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
@@ -26,7 +26,7 @@ Administrator rights are needed for the audit policy (AU-2), password complexity
 
 ## Interface
 
-Four pages in a sidebar menu, under a top bar showing the tool name (change `APP_NAME` in `ui.py`):
+The application has four pages in a sidebar menu, with the project name displayed in the top bar. The name is configured through `APP_NAME` in `ui.py`:
 
 - **Start here** - what the tool does, how to use it in 4 steps, why these 10 controls, and what the manual controls are.
 - **Summary** - compliance %, passed / partial / failed, top risks and a "fix first" hint.
@@ -61,7 +61,7 @@ Likelihood/impact values live in `controls.py` and are easy to tune.
 ## AI analysis
 
 Report page -> expand "API key (optional)" and paste an Anthropic key (or set `ANTHROPIC_API_KEY`), then click **Generate written summary**.
-The model sees only your recorded evidence, is told not to invent facts, and its output is validated against real control IDs. Without a key (or if the call fails) a deterministic offline template is used, so the feature never breaks. Optionally set `ANTHROPIC_MODEL` to change the model.
+The AI-assisted analysis uses recorded assessment evidence, instructs the model to avoid unsupported claims, and validates its output against the project's defined control IDs. Without a key (or if the call fails) a deterministic offline template is used, so the feature never breaks. Optionally set `ANTHROPIC_MODEL` to change the model.
 
 ## Project layout
 
