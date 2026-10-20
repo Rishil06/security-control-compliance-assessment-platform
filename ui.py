@@ -7,8 +7,8 @@ from risk import COMPLIANCE_POINTS
 
 e = html.escape
 
-APP_NAME = "ControlScope"
-APP_TAGLINE = "Security control assessment"
+APP_NAME = "Security Control & Compliance Assessment Platform"
+APP_TAGLINE = "NIST SP 800-53 Control Assessment & Risk Scoring"
 
 STATUS_COLOR = {"PASS": "#2e7d5b", "PARTIAL": "#b7791f", "FAIL": "#c53030", "NOT ASSESSED": "#718096"}
 STATUS_LABEL = {"PASS": "Pass", "PARTIAL": "Partial", "FAIL": "Fail", "NOT ASSESSED": "Not assessed"}

@@ -44,7 +44,7 @@ def build_report(rows, ai=None, host=None) -> bytes:
     gaps = sorted([r for r in rows if r["status"] in ("FAIL", "PARTIAL")], key=lambda r: r["risk_score"], reverse=True)
     pct = compliance_percent(rows)
 
-    story = [Paragraph("Security Control Assessment Report", h1),
+    story = [Paragraph("Security Control & Compliance Assessment Report", h1),
              Paragraph("Framework: NIST SP 800-53 (scoped subset)", body),
              Paragraph(escape(f"Host: {host.get('hostname', 'n/a')} | OS: {host.get('os', 'n/a')} | "
                               f"Generated: {host.get('generated', datetime.now().strftime('%Y-%m-%d %H:%M'))}"), small),
@@ -137,6 +137,6 @@ def build_report(rows, ai=None, host=None) -> bytes:
 
     buf = io.BytesIO()
     SimpleDocTemplate(buf, pagesize=A4, leftMargin=18 * mm, rightMargin=18 * mm, topMargin=16 * mm,
-                      bottomMargin=18 * mm, title="Security Control Assessment Report").build(
+                      bottomMargin=18 * mm, title="Security Control & Compliance Assessment Report").build(
         story, onFirstPage=_footer, onLaterPages=_footer)
     return buf.getvalue()

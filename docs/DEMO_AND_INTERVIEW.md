@@ -28,7 +28,7 @@
 
 ## CV text (use only what is built and working)
 
-[Security Control & Compliance Assessment Platform:](https://github.com/Rishil06/REPO_NAME)
+[Security Control & Compliance Assessment Platform](https://github.com/Rishil06/security-control-compliance-assessment-platform)
 NIST SP 800-53 Control Assessment and Risk Scoring
 
 * •Built a GRC automation platform in Python and Streamlit that assesses security controls against NIST SP 800-53 and runs automated checks on a Windows system (firewall, password and lockout policy, audit policy, Defender, UAC/SMBv1). Identified control gaps, calculated likelihood-impact risk scores, and generated AI-assisted remediation recommendations and PDF compliance reports.
@@ -42,4 +42,4 @@ Honesty notes: drop "AI-assisted" and "LLM API" if you only use the offline temp
 - [ ] Run it on your Windows machine as Administrator; confirm every check returns a sensible result
 - [ ] Weaken then fix a setting and confirm FAIL -> PASS
 - [ ] Take 3-4 screenshots (dashboard, gap detail, history, PDF) into a `screenshots/` folder and reference them in the README
-- [ ] Create the GitHub repo, push (grc.db and keys are git-ignored), update the CV link
+- [ ] Verify that the GitHub repository URL matches the project link in the CV.
